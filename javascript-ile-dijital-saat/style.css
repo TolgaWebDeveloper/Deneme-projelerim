@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #060a1f;
+}
+
+#clock-box #time{
+    display: flex;
+}
+
+#clock-box #time div{
+    position: relative;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+    margin: 0 9px;
+}
+
+#clock-box #time div span{
+    position: relative;
+    display: block;
+    width: 180px;
+    height: 160px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+    font-weight: 300px;
+    padding: 35px;
+    font-size: 3em;
+    background: #2196f3;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .2);
+}
+
+#clock-box #time div span:nth-child(2){
+    height: 30px;
+    line-height: 30px;
+    font-size: 7em;
+    letter-spacing: .2m;
+    font-weight: 500;
+    z-index: 9;
+    box-shadow: none;
+    background: #127fd6;
+    text-transform: uppercase;
+}
+
+#clock-box #time div:last-child span{
+    background-color: #15c46f;
+}
+
+#clock-box #time div:last-child span:nth-child(2){
+    background: #11a731b6;
+}
+
+#clock-box #time div span:nth-child(1){
+    line-height: 80px;
+}
+
+ @media screen and (max-width:430px) {
+            #clock-box #time div span {
+                position: relative;
+                display: block;
+                width: 100px;
+                height: 80px;
+                color: #fff;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                z-index: 10;
+                font-weight: 300px;
+                padding: 1px;
+                font-size: 3em;
+                background: #2196f3;
+                box-shadow: 0 0 0 1px rgba(0, 0, 0, .2);
+            }
+
+
+            #clock-box #time div {
+                margin: 0 5px;
+            }
+
+            body{
+                height: 100vh;
+            }
+
+        }
