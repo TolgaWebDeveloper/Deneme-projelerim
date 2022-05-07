@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkgrey;
+    display: flex;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#bg {
+    background-image: url(https://images.pexels.com/photos/8652888/pexels-photo-8652888.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    height: 150vh;
+    width: 50%;
+    background-size: cover;
+    animation: bg_opacity 1s ease;
+}
+
+h1 {
+    color: #fff;
+    font-size: 80px;
+    width: 330px;
+    text-align: left;
+    margin-left: 100px;
+    margin-top: 160px;
+    font-weight: 900;
+    text-transform: uppercase;
+    animation: bg_opacity 3s ease;
+}
+
+span {
+    color: #fff;
+    position: relative;
+    bottom: -100px;
+    left: 35%;
+}
+
+.card {
+    min-width: 600px;
+    padding: 30px;
+    background-color: #ddd;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(30%, -70%);
+    border-radius: 15px;
+    animation: bg_opacity 1s ease;
+}
+
+hr {
+    margin-top: 10px;
+    background-color: #000;
+    width: 30%;
+    height: 4px;
+    border: none;
+    animation: lineWidth 1s ease;
+}
+
+form {
+    margin-top: 50px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    background-color: #ddd;
+    border-bottom: 1px solid black;
+    font-size: 18px;
+}
+
+input::placeholder {
+    font-size: 18px;
+}
+
+input:focus {
+    border-color: red;
+}
+
+.check {
+    margin-top: 12px;
+    display: flex;
+    justify-content: end;
+}
+
+input[type="checkbox"] {
+    width: 15px;
+    height: 12px;
+    margin-top: 7px;
+    margin-left: 5px;
+}
+
+p a {
+    text-decoration: none;
+    color: red;
+}
+
+a {
+    color: #000;
+    transition: .7s;
+}
+
+a:hover {
+    color: red;
+}
+
+.submit {
+    margin-top: 10px;
+    margin-left: 45%;
+    font-size: 60px;
+}
+
+.socials {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(70%, 100%);
+    margin-top: 30px;
+}
+
+.social {
+    display: inline-block;
+    background-color: #fff;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.social a {
+    display: inline-block;
+    padding: 20px;
+}
+
+.social a i {
+    font-size: 32px;
+}
+
+@media (max-width:1600px) {
+    .card {
+        min-width: 550px;
+        transform: translate(30%, -70%);
+    }
+
+    .socials {
+        transform: translate(60%, 100%);
+    }
+}
+
+@media (max-width:1500px) {
+    .card {
+        min-width: 500px;
+        transform: translate(20%, -70%);
+    }
+
+    .socials {
+        transform: translate(37%, 100%);
+    }
+}
+
+@media (max-width:1300px) {
+    .card {
+        min-width: 450px;
+        transform: translate(10%, -70%);
+    }
+
+    .socials {
+        transform: translate(18%, 100%);
+    }
+}
+
+@media (max-width:1000px) {
+    #bg {
+        width: 100%;
+    }
+
+    h1 {
+        visibility: hidden;
+    }
+
+    .card {
+        transform: translate(-50%, -70%);
+        min-width: 500px;
+    }
+
+    i {
+        margin-top: 15px;
+        margin-left: 45%;
+        font-size: 50px;
+    }
+
+    .socials {
+        transform: translate(-10%, 100%);
+        margin-top: 30px;
+        left: 30%;
+        min-width: 400px;
+    }
+
+    .social {
+        clip-path: circle(30px at center);
+    }
+
+    .social a i {
+        margin-left: 1px;
+        margin-top: 1px;
+    }
+
+}
+
+@media (max-width:600px) {
+    #bg {
+        width: 100vh;
+    }
+
+    span{
+        bottom: -20px;
+        left: 28%;
+    }
+
+    .card {
+        min-width: 300px;
+        transform: translate(-40%, -60%);
+    }
+
+    p {
+        margin-top: 15px;
+    }
+
+    i {
+        margin-top: 25px;
+        margin-left: 10%;
+        font-size: 40px;
+    }
+
+    .socials {
+        transform: translate(-60%, 100%);
+        left: 74%;
+        min-width: 350px;
+        margin-top: 140px;
+    }
+
+    .social {
+        clip-path: circle(30px at center);
+    }
+
+    .social a {
+        padding: 10px;
+    }
+
+    .social a i {
+        margin-left: 1px;
+        margin-top: 1px;
+        font-size: 26px;
+    }
+}
+
+@keyframes lineWidth {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 30%;
+    }
+}
+
+@keyframes bg_opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
