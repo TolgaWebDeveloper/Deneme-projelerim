@@ -9,14 +9,14 @@
 body {
     background-color: darkgrey;
     display: flex;
-    overflow: hidden;
     font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
 }
 
 
 #bg {
     background-image: url(https://images.pexels.com/photos/8652888/pexels-photo-8652888.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-    height: 150vh;
+    min-height: 150vh;
     width: 50%;
     background-size: cover;
     animation: bg_opacity 1s ease;
@@ -28,7 +28,7 @@ h1 {
     width: 330px;
     text-align: left;
     margin-left: 100px;
-    margin-top: 160px;
+    margin-top: 90px;
     font-weight: 900;
     text-transform: uppercase;
     animation: bg_opacity 3s ease;
@@ -37,7 +37,7 @@ h1 {
 span {
     color: #fff;
     position: relative;
-    bottom: -100px;
+    top:0;
     left: 35%;
 }
 
@@ -46,7 +46,7 @@ span {
     padding: 30px;
     background-color: #ddd;
     position: absolute;
-    top: 50%;
+    top: 25em;
     left: 50%;
     transform: translate(30%, -70%);
     border-radius: 15px;
@@ -120,7 +120,7 @@ a:hover {
 
 .socials {
     position: absolute;
-    top: 60%;
+    top: 30em;
     left: 50%;
     transform: translate(70%, 100%);
     margin-top: 30px;
@@ -214,18 +214,22 @@ a:hover {
 }
 
 @media (max-width:600px) {
-    #bg {
-        width: 100vh;
+   body{
+     overflow-x:hidden;
     }
-
+  
     span{
-        bottom: -20px;
-        left: 28%;
+      left:11%;
+      top:10px;
+    }
+  
+    #bg {
+        min-width: 100vh;
     }
 
     .card {
         min-width: 300px;
-        transform: translate(-40%, -60%);
+        transform: translate(-50%, -60%);
     }
 
     p {
@@ -239,10 +243,11 @@ a:hover {
     }
 
     .socials {
-        transform: translate(-60%, 100%);
-        left: 74%;
+        position:absolute;
+        transform: translate(-50%, 100%);
         min-width: 350px;
-        margin-top: 140px;
+        left:58%;
+        top:35em;
     }
 
     .social {
@@ -277,5 +282,6 @@ a:hover {
 
     100% {
         opacity: 1;
-    }
+ 
+   }   
 }
